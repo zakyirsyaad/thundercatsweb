@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+}
+
+.brand-name {
+    font-size: 30px;
+    font-family: 'Maven Pro', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+header nav p {
+    padding: 0px 10%;
+}
+
+.nav-icon {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-icon p {
+    font-weight: 600;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}

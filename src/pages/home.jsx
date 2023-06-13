@@ -1,57 +1,51 @@
-import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
 import Form from "../component/form";
+import 'react-slideshow-image/dist/styles.css'
+import { Slide } from 'react-slideshow-image';
+import React, { useState } from 'react';
 
 export default function Home() {
+    const images = [
+        "https://images.unsplash.com/photo-1529720317453-c8da503f2051?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+        "https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    ];
 
-    const [showDialog, setShowDialog] = useState(false);
+
+
+    const [showBanner, setShowBanner] = useState(true);
 
     const handleButtonClick = () => {
-        setShowDialog(!showDialog);
+        setShowBanner(false);
     };
-
-    const handleCloseDialog = () => {
-        setShowDialog(false);
-    };
-
     return (
         <div className="container">
-            <header>
-                <p className="brand-name">Thundercats</p>
-
-                <nav>
-                    <p><NavLink className='link'>Shop</NavLink></p>
-                    <p><NavLink className='link'>About</NavLink></p>
-                    <p><NavLink className='link'>Contact</NavLink></p>
-                    <div className="nav-icon">
-                        <p class="material-symbols-outlined">
-                            shopping_cart
-                        </p>
-                        <p class="material-symbols-outlined search">
-                            search
-                        </p>
+            <Slide>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[0]})` }}>
                     </div>
-                </nav>
-            </header>
-
-            <section className="banner-content">
-                <p className="header-banner">Discover your luxury outfit.</p>
-
-                <button className="modal-btn" onClick={handleButtonClick}>
-                    {showDialog ? 'Welcome User' : 'Get Started'}
-                </button>
-
-                {showDialog && (
+                </div>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[1]})` }}>
+                    </div>
+                </div>
+                <div className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${images[2]})` }}>
+                    </div>
+                </div>
+            </Slide>
+            {showBanner && (
+                <section className="banner-content">
                     <div className="dialog">
-                        <button className="close-modal-btn" onClick={handleCloseDialog}>
-                            <span class="material-symbols-outlined icon-close-btn">
+                        <button className="close-modal-btn" onClick={handleButtonClick}>
+                            <span className="material-symbols-outlined icon-close-btn">
                                 close
                             </span>
                         </button>
-                        {<Form />}
+                        <Form />
                     </div>
-                )}
-            </section>
+                </section>
+            )}
+
         </div >
 
     )
