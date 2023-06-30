@@ -5,17 +5,31 @@ import './navbar.css'
 export default function Navbar() {
     return (
         <header>
-            <NavLink className="brand-name" to='/'>Thundercats</NavLink>
+            <nav className="nav-container">
+                <NavLink className='link' to='product'>
+                    <p>product</p>
+                </NavLink>
+                <NavLink className='link' to='about'
+                ><p>About</p>
+                </NavLink>
+            </nav>
+            <nav className="nav-container">
+                <NavLink className="brand-name" to='/'>
+                    <p>Thundercats</p>
+                </NavLink>
+            </nav>
 
-            <nav>
-                <p><NavLink className='link' to='shop'>Shop</NavLink></p>
-                <p><NavLink className='link'>About</NavLink></p>
-                <p><NavLink className='link'>Contact</NavLink></p>
-                <div className="nav-icon">
-                    <p class="material-symbols-outlined">
-                        shopping_cart
+            <nav className="nav-container">
+                <NavLink className='link' to='contact'>
+                    <p>Contact</p>
+                </NavLink>
+                <NavLink className='link' to='contact'>
+                    <p className="material-symbols-outlined">
+                        shopping_cart_checkout
                     </p>
-                    <p class="material-symbols-outlined search">
+                </NavLink>
+                <div className='link'>
+                    <p className="material-symbols-outlined">
                         search
                     </p>
                 </div>

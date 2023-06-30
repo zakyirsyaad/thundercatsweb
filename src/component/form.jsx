@@ -1,4 +1,5 @@
 import "./formstyle.css"
+import { Link } from 'react-router-dom';
 
 
 export default function Form() {
@@ -11,8 +12,10 @@ export default function Form() {
             </p>
             <form className="form-container">
                 <input type="email" name="" id="" className="email-form-modal" placeholder="contohsaja@gmail.com" />
-                <button className="btn-form-modal">Sign Up</button>
+                <Link className="link-sign" to="/shop">
+                    <button className="btn-form-modal">Sign up</button>
+                </Link>
             </form>
-        </div>
+        </div >
     )
 }

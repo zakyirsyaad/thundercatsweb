@@ -1,6 +1,6 @@
 import Form from "../component/form";
 import 'react-slideshow-image/dist/styles.css'
-import { Slide } from 'react-slideshow-image';
+import { Fade } from 'react-slideshow-image';
 import React, { useState } from 'react';
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
     };
     return (
         <div className="container">
-            <Slide>
+            <Fade>
                 <div className="each-slide-effect">
                     <div style={{ 'backgroundImage': `url(${images[0]})` }}>
                     </div>
@@ -32,7 +32,7 @@ export default function Home() {
                     <div style={{ 'backgroundImage': `url(${images[2]})` }}>
                     </div>
                 </div>
-            </Slide>
+            </Fade>
             {showBanner && (
                 <section className="banner-content">
                     <div className="dialog">
@@ -45,7 +45,6 @@ export default function Home() {
                     </div>
                 </section>
             )}
-
         </div >
 
     )

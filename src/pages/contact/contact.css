@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 200px;
+    font-family: 'poppins', sans-serif;
+}
+
+iframe {
+    display: flex;
+}
+
+.header-contact {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.touch-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.list-touch {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-touch {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* #858585; */
+.contact-touch {
+    color: #858585;
+    font-weight: 600;
+}
+
+.contact-touch-warp {
+    margin-bottom: 10px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.form-input input,
+textarea {
+    font-family: 'poppins', sans-serif;
+    width: 400px;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 550;
+    outline: none;
+    border: none;
+    background-color: #f7f7f7;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.form-input input:hover,
+textarea:hover {
+    background-color: #363636;
+    color: #f7f7f7;
+}
+
+.form-input input:focus,
+textarea:focus {
+    background-color: #363636;
+    color: #f7f7f7;
+    border-radius: 15px 0px;
+}
+
+textarea {
+    height: 150px;
+    font-size: 14px;
+}
+
+.form-input button {
+    height: 40px;
+    font-size: 15px;
+    font-weight: 550;
+    outline: none;
+    background-color: #f7f7f7;
+    border: 3px solid #363636;
+    color: #363636;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.form-input button:hover {
+    border-radius: 15px 0px;
+    border: none;
+    background-color: #363636;
+    color: #f7f7f7;
+}
+
+::-webkit-input-placeholder {
+    font-size: 16px;
+}

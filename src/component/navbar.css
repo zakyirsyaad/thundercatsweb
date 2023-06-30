@@ -1,7 +1,7 @@
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding: 25px;
 }
@@ -11,18 +11,14 @@ header {
     font-family: 'Maven Pro', sans-serif;
     text-decoration: none;
     color: black;
+    transition: all .3s;
 }
 
-header nav {
+.nav-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-}
-
-header nav p {
-    padding: 0px 10%;
 }
 
 .nav-icon {
@@ -39,4 +35,11 @@ header nav p {
     color: black;
     font-size: 17px;
     font-weight: 500;
+    transition: all .3s;
+    margin: 10px;
+}
+
+.link:hover,
+.brand-name:hover {
+    color: lightcoral;
 }

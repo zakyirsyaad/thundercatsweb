@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "id_product": 1,
+            "gambar": "https://thanksinsomnia.asia/wp-content/uploads/2023/06/ginee_20230622142836508_4241830757.jpeg",
+            "nama_product": "Micky Thunder",
+            "jenis_product": "Kaos",
+            "stok": 1234234
+        },
+        {
+            "id_product": 2,
+            "gambar": "https://thanksinsomnia.asia/wp-content/uploads/2023/06/ginee_20230622142836508_4241830757.jpeg",
+            "nama_product": "Helo Thunder",
+            "jenis_product": "Kaos",
+            "stok": 1213333
+        },
+        {
+            "id_product": 3,
+            "gambar": "https://thanksinsomnia.asia/wp-content/uploads/2023/06/ginee_20230622142836508_4241830757.jpeg",
+            "nama_product": "Mouse Thunder",
+            "jenis_product": "Kaos",
+            "stok": 13445566
+        }
+    ]
+}
