@@ -10,6 +10,7 @@ import DetailProduct from './product/detailproduct';
 import { useState } from 'react';
 import Cart from './cart/cart';
 import { ToastContainer } from 'react-toastify';
+import Checkout from './checkout/checkout';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -29,6 +30,7 @@ function App() {
         <Route path='/cart' element={<Cart cart={cart} />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/checkout' element={<Checkout />} />
       </Routes>
       <Layoutfooter />
     </Router>

@@ -18,7 +18,7 @@ export default function Home() {
         setShowBanner(false);
     };
     return (
-        <div className="container">
+        <div className="container-home">
             <Fade>
                 <div className="each-slide-effect">
                     <div style={{ 'backgroundImage': `url(${images[0]})` }}>

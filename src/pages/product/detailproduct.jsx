@@ -46,7 +46,7 @@ export default function DetailProduct() {
                 </div>
                 <div className='detail-text'>
                     <p className='nama-detail'>{product.nama_product}</p>
-                    <p className='harga-detail'>{product.harga}</p>
+                    <p className='harga-detail'>Rp. {(parseFloat(product.harga)).toLocaleString()}</p>
                     <p className='description-detail'>
                         PERHATIAN:
                         – Pastikan alamat sudah lengkap & No Hp aktif agar memudahkan kurir dalam pengiriman
@@ -56,7 +56,7 @@ export default function DetailProduct() {
                         Kecacatan pada produk.
                         Mohon untuk direkam saat membuka paket dari kami untuk menjadi bukti. Mohon maaf kami tidak menerima pengembalian jika kesalahan dari pihak pembeli, seperti salah memilih size atau warna atau tidak ada rekaman saat membuka paket.
                     </p>
-                    <button onClick={() => dispatch(AddCart(product))}>ADD TO CART</button>
+                    <button className='product-btn' onClick={() => dispatch(AddCart(product))}>ADD TO CART</button>
                 </div>
             </div>
         );

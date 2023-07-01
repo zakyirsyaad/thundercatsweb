@@ -30,10 +30,10 @@ export default function Product() {
             {filter.map((product) => (
                 <div className="product-box" key={product.id}>
                     <img src={product.url} alt={product.nama_product} />
-                    <div>
+                    <div className='description-product'>
                         <p className='nama-product'>{product.nama_product}</p>
                         <p className='harga-product'>Rp. {product.harga}</p>
-                        <NavLink to={`/product/${product.id}`}><button>BUY NOW</button></NavLink>
+                        <NavLink to={`/product/${product.id}`}><button className='product-btn'>BUY NOW</button></NavLink>
                     </div>
                 </div>
             ))}
