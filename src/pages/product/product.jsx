@@ -1,75 +1,42 @@
-import React, { useEffect, useState } from 'react'
-import './product.css'
+import React, { useEffect, useState } from 'react';
+import './product.css';
+import { NavLink } from 'react-router-dom';
 
 export default function Product() {
-    const [data, setData] = useState([])
-    const [filter, setFilter] = useState([])
-    const [loading, setLoading] = useState([])
-    let componentMounted = true
+    const [data, setData] = useState([]);
+    const [filter, setFilter] = useState([]);
 
     useEffect(() => {
+        let componentMounted = true;
+
         const getProducts = async () => {
-            setLoading(true)
-            const response = await fetch("https://fakestoreapi.com/products")
+            const response = await fetch('http://localhost:4000/product');
+            const products = await response.json();
+
             if (componentMounted) {
-                setData(await response.clone().json())
-                setFilter(await response.json())
-                setLoading(false)
-                console.log(filter)
+                setData(products);
+                setFilter(products);
             }
-            return () => {
-                componentMounted = false
-            }
-        }
-        getProducts()
-    }, [])
+        };
 
-    const Loading = () => {
-        return (
-            <>
-                Loading ....
-            </>
-        )
-    }
+        getProducts();
 
-
-    const filterProduct = (cat) => {
-        if (cat === 'All') {
-            setFilter(data)
-        } else {
-            const filteredList = data.filter((product) => product.category === cat)
-            setFilter(filteredList)
-        }
-    }
-
-
-    const ShowProducts = ({ filter }) => {
-        return (
-            <div>
-                <button onClick={() => filterProduct('All')}>All</button>
-                <button onClick={() => filterProduct("men's clothing")}>Mens Clothing</button>
-                <button onClick={() => filterProduct("women's clothing")}>Womens Clothing</button>
-                <button onClick={() => filterProduct('jewelery')}>Jewelry</button>
-                <button onClick={() => filterProduct('electronics')}>Electronic</button>
-                {filter.map((product) => (
-                    <div className="product-box" key={product.id}>
-                        <img src={product.image} alt={product.title} />
-                        <div>
-                            <p>{product.title}</p>
-                            <p>${product.price}</p>
-                        </div>
-                    </div>
-                ))}
-            </div >
-        );
-    };
-
+        return () => {
+            componentMounted = false;
+        };
+    }, []);
     return (
-        <div>
-            <p>LATEST PRODUCT</p>
-            <div>
-                {loading ? <Loading /> : <ShowProducts filter={filter} />}
-            </div>
+        <div className='product-container'>
+            {filter.map((product) => (
+                <div className="product-box" key={product.id}>
+                    <img src={product.url} alt={product.nama_product} />
+                    <div>
+                        <p className='nama-product'>{product.nama_product}</p>
+                        <p className='harga-product'>Rp. {product.harga}</p>
+                        <NavLink to={`/product/${product.id}`}><button>BUY NOW</button></NavLink>
+                    </div>
+                </div>
+            ))}
         </div>
-    )
+    );
 }

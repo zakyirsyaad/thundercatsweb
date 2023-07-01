@@ -1,3 +1,78 @@
-img {
-    width: 200px;
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.product-box {
+    margin: 0px 50px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all .3s;
+
+}
+
+.product-box:hover {
+    transform: scale(1.1);
+}
+
+.product-box img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    transition: all .3s;
+}
+
+.nama-product {
+    font-weight: 500;
+}
+
+.harga-product {
+    font-weight: 500;
+    color: red;
+}
+
+.detail-product-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px 200px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.detail-product-container img {
+    transition: all.3s;
+}
+
+.detail-product-container img:hover {
+    transform: scale(1.5);
+}
+
+.detail-text {
+    margin-left: 100px;
+    padding: 0px 100px;
+}
+
+.nama-detail {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.harga-detail {
+    font-size: 20px;
+    font-weight: 500;
+    color: red;
+}
+
+.description-detail {
+    margin: 50px 0px;
 }

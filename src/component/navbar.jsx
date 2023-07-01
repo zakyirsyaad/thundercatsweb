@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import '../pages/App.css'
 import './navbar.css'
-
 export default function Navbar() {
+
     return (
         <header>
             <nav className="nav-container">
@@ -23,10 +23,11 @@ export default function Navbar() {
                 <NavLink className='link' to='contact'>
                     <p>Contact</p>
                 </NavLink>
-                <NavLink className='link' to='contact'>
+                <NavLink className='link' to='cart'>
                     <p className="material-symbols-outlined">
                         shopping_cart_checkout
                     </p>
+
                 </NavLink>
                 <div className='link'>
                     <p className="material-symbols-outlined">
