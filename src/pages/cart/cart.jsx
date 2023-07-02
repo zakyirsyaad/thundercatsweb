@@ -4,6 +4,7 @@ import { AddCart, ClearCart, DecreaseCart, RemoveCart, TotalCart } from '../../r
 import { Table, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './cart.css'
+import { NavLink } from 'react-router-dom';
 
 export default function Cart() {
     const { carts, amount } = useSelector((state) => state.user);
@@ -71,9 +72,9 @@ export default function Cart() {
                 <div>
                     <p className='total'>
                         Subtotal:
-                        <span> Rp.{amount} </span>
+                        <span> Rp. {amount.toLocaleString()} </span>
                     </p>
-                    <Button variant="dark" onClick={() => handleClearCart()}>Checkout</Button>
+                    <NavLink to='/Checkout'><Button variant="dark">Checkout</Button></NavLink>
                 </div>
             </div>
 

@@ -20,7 +20,7 @@ export default function DetailProduct() {
 
         const getProductFromAPI = async () => {
             setLoading(true);
-            const response = await fetch(`http://localhost:4000/product/${id}`);
+            const response = await fetch(`http://localhost:3001/product/${id}`);
             const data = await response.json();
             setProduct(data);
             setLoading(false);

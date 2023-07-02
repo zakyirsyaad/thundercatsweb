@@ -10,7 +10,7 @@ export default function Product() {
         let componentMounted = true;
 
         const getProducts = async () => {
-            const response = await fetch('http://localhost:4000/product');
+            const response = await fetch('http://localhost:3001/product');
             const products = await response.json();
 
             if (componentMounted) {
