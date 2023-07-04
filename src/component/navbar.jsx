@@ -7,7 +7,7 @@ export default function Navbar() {
         <header>
             <nav className="nav-container">
                 <NavLink className='link' to='product'>
-                    <p>product</p>
+                    <p>Product</p>
                 </NavLink>
                 <NavLink className='link' to='about'
                 ><p>About</p>
